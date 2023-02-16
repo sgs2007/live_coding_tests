@@ -1,0 +1,8 @@
+query Fetchcontries {
+  countries {
+    name
+    code
+    currency
+    native
+  }
+}
