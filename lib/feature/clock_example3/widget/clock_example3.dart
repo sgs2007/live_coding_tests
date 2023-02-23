@@ -8,6 +8,7 @@ class ClockExample3 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.grey.shade300,
       body: Center(
         child: Container(
           width: 400,
@@ -20,7 +21,7 @@ class ClockExample3 extends StatelessWidget {
             stream: Stream.periodic(const Duration(seconds: 1)),
             builder: (context, snapshot) {
               return CustomPaint(
-                painter: ClockPainter(),
+                painter: ClockPainter1(),
               );
             },
           ),
@@ -30,7 +31,7 @@ class ClockExample3 extends StatelessWidget {
   }
 }
 
-class ClockPainter extends CustomPainter {
+class ClockPainter1 extends CustomPainter {
   @override
   void paint(Canvas canvas, Size size) {
     final center = Offset(size.width / 2, size.height / 2);
@@ -40,9 +41,9 @@ class ClockPainter extends CustomPainter {
       textDirection: TextDirection.ltr,
     );
 
-    for (int i = 0; i < 12; i++) {
+    for (int i = 1; i <= 12; i++) {
       textPainter.text = TextSpan(
-        text: '${i + 1}',
+        text: '$i',
         style: const TextStyle(
           color: Colors.red,
           fontSize: 20,

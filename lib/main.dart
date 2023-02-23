@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'feature/clock_example3/widget/clock_example3.dart';
+import 'shell_router/router.dart';
 
 const double edgePadding = 16.0;
 
@@ -13,21 +13,8 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-      // home: BlocProvider(
-      //   create: (context) => CountriesBloc(
-      //     service: CountriesService(
-      //       CountriesDataProvider(),
-      //     ),
-      //   ),
-      //   child: const CountriesWidget(),
-      // ),
-      // home: const Clock2(),
-      home: const ClockExample3(),
+    return MaterialApp.router(
+      routerConfig: GoRouterBuilderClass().router,
     );
   }
 }
