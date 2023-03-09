@@ -3,6 +3,7 @@ import 'package:go_router/go_router.dart';
 
 import '../feature/clock_example2/widget/clock2.dart';
 import '../feature/clock_example3/widget/clock_example3.dart';
+import '../feature/clock_example4/clock_example4.dart';
 import '../feature/modern_design/widgets/modern_design_screen.dart';
 import 'widget/scaffold_nav_bar.dart';
 
@@ -34,7 +35,7 @@ class GoRouterBuilderClass {
           ),
           GoRoute(
             path: clock2,
-            builder: (context, state) => const Clock2(),
+            builder: (context, state) => const ClockExample4(),
           ),
           GoRoute(
             path: modernDesign,
